@@ -15,6 +15,8 @@ namespace ZooApp
         public Form1()
         {
             InitializeComponent();
+            Zoologico zooConfig = new Zoologico();
+            zooConfig.Login();
         }
     }
 }
