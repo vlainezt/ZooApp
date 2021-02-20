@@ -18,5 +18,22 @@ namespace ZooApp
             Zoologico zooConfig = new Zoologico();
             zooConfig.Login();
         }
+
+        private void btnExitLogin_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMInimizedLogin_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnLogear_Click(object sender, EventArgs e)
+        {
+            registerFrom formRegister = new registerFrom();
+            formRegister.Show();
+            this.Hide();
+        }
     }
 }

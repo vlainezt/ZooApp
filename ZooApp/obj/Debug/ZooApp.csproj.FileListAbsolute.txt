@@ -9,3 +9,7 @@ C:\ZooApp\ZooApp\obj\Debug\ZooApp.csproj.GenerateResource.cache
 C:\ZooApp\ZooApp\obj\Debug\ZooApp.csproj.CoreCompileInputs.cache
 C:\ZooApp\ZooApp\obj\Debug\ZooApp.exe
 C:\ZooApp\ZooApp\obj\Debug\ZooApp.pdb
+C:\ZooApp\ZooApp\obj\Debug\ZooApp.Form1.resources
+C:\ZooApp\ZooApp\bin\Debug\Bunifu_UI_v1.52.dll
+C:\ZooApp\ZooApp\obj\Debug\ZooApp.csproj.CopyComplete
+C:\ZooApp\ZooApp\obj\Debug\ZooApp.registerFrom.resources
