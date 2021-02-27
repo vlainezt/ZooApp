@@ -29,6 +29,7 @@ namespace ZooApp
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registerFrom));
             this.pnlContentRegister = new System.Windows.Forms.Panel();
             this.btnRegisterUser = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -38,7 +39,9 @@ namespace ZooApp
             this.txtUserPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtUserNameRegister = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblRegister = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.erPUsers = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlContentRegister.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.erPUsers)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlContentRegister
@@ -80,6 +83,7 @@ namespace ZooApp
             this.btnRegisterUser.Size = new System.Drawing.Size(181, 45);
             this.btnRegisterUser.TabIndex = 18;
             this.btnRegisterUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
             // 
             // txtUserRoll
             // 
@@ -99,6 +103,7 @@ namespace ZooApp
             this.txtUserRoll.Size = new System.Drawing.Size(416, 52);
             this.txtUserRoll.TabIndex = 17;
             this.txtUserRoll.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUserRoll.Validating += new System.ComponentModel.CancelEventHandler(this.txtUserRoll_Validating);
             // 
             // txtEmailUser
             // 
@@ -118,6 +123,7 @@ namespace ZooApp
             this.txtEmailUser.Size = new System.Drawing.Size(416, 52);
             this.txtEmailUser.TabIndex = 16;
             this.txtEmailUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtEmailUser.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmailUser_Validating);
             // 
             // txtRepeatPassword
             // 
@@ -137,6 +143,7 @@ namespace ZooApp
             this.txtRepeatPassword.Size = new System.Drawing.Size(416, 52);
             this.txtRepeatPassword.TabIndex = 15;
             this.txtRepeatPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtRepeatPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtRepeatPassword_Validating);
             // 
             // txtUserPassword
             // 
@@ -156,6 +163,7 @@ namespace ZooApp
             this.txtUserPassword.Size = new System.Drawing.Size(416, 52);
             this.txtUserPassword.TabIndex = 14;
             this.txtUserPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUserPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtUserPassword_Validating);
             // 
             // txtUserNameRegister
             // 
@@ -175,6 +183,7 @@ namespace ZooApp
             this.txtUserNameRegister.Size = new System.Drawing.Size(416, 52);
             this.txtUserNameRegister.TabIndex = 13;
             this.txtUserNameRegister.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUserNameRegister.Validating += new System.ComponentModel.CancelEventHandler(this.txtUserNameRegister_Validating);
             // 
             // lblRegister
             // 
@@ -186,6 +195,10 @@ namespace ZooApp
             this.lblRegister.Size = new System.Drawing.Size(234, 29);
             this.lblRegister.TabIndex = 12;
             this.lblRegister.Text = "Registrar usuario";
+            // 
+            // erPUsers
+            // 
+            this.erPUsers.ContainerControl = this;
             // 
             // registerFrom
             // 
@@ -200,6 +213,7 @@ namespace ZooApp
             this.Text = "registerFrom";
             this.pnlContentRegister.ResumeLayout(false);
             this.pnlContentRegister.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.erPUsers)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -214,5 +228,6 @@ namespace ZooApp
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtUserPassword;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtUserNameRegister;
         private Bunifu.Framework.UI.BunifuCustomLabel lblRegister;
+        private System.Windows.Forms.ErrorProvider erPUsers;
     }
 }

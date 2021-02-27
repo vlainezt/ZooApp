@@ -7,32 +7,26 @@ namespace ZooApp
     {
         Conexion conn = new Conexion();
 
-        public void Login()
+        public bool Login(string User, string Password)
         {
-            DataRow[] dt = conn.readQuery("select * from Usrs", "Usrs", true);
+            string query = String.Format("select * from Usrs where Usr='{0}' and Pass='{1}'", User, Password);
+            DataRow[] dt = conn.readQuery(query, "Usrs", true);
 
             if (dt.Length == 1)
             {
-                Console.WriteLine("Users Exist");
+                return true;
             }
             else
             {
-                Console.WriteLine("Users No Exist");
+                return false;
             }
         }
 
-        public void Register()
+        public bool Register(string User, string Password, string Email)
         {
-            bool set = conn.setData(String.Format("insert into Usrs (Usr, Pass, Email) values ('{0}', '{1}', '{2}')","Stanley", "stanley123", "johansson.05@hotmail.com"));
+            bool set = conn.setData(String.Format("insert into Usrs (Usr, Pass, Email) values ('{0}', '{1}', '{2}')",User,Password, Email));
 
-            if (set)
-            {
-                Console.WriteLine("Insert Success");
-            }
-            else
-            {
-                Console.WriteLine("Insert Fail");
-            }
+            return set;
         }
     }
 }

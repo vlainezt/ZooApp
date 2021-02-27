@@ -12,11 +12,10 @@ namespace ZooApp
 {
     public partial class Form1 : Form
     {
+        Zoologico zooConfig = new Zoologico();
         public Form1()
         {
             InitializeComponent();
-            Zoologico zooConfig = new Zoologico();
-            zooConfig.Login();
         }
 
         private void btnExitLogin_Click(object sender, EventArgs e)
@@ -31,9 +30,22 @@ namespace ZooApp
 
         private void btnLogear_Click(object sender, EventArgs e)
         {
-            registerFrom formRegister = new registerFrom();
-            formRegister.Show();
-            this.Hide();
+            string User = txtUserNameLogin.Text.Trim(),
+                Password = txxPasswordLogin.Text.Trim();
+
+            bool result = zooConfig.Login(User, Password);
+
+            if (result)
+            {
+                frmDashboard form = new frmDashboard();
+                form.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario no existe");
+            }
+
         }
     }
 }

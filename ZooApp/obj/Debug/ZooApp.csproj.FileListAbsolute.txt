@@ -12,3 +12,5 @@ C:\ZooApp\ZooApp\obj\Debug\ZooApp.pdb
 C:\ZooApp\ZooApp\obj\Debug\ZooApp.Form1.resources
 C:\ZooApp\ZooApp\obj\Debug\ZooApp.csproj.CopyComplete
 C:\ZooApp\ZooApp\obj\Debug\ZooApp.registerFrom.resources
+C:\zooapp\ZooApp\bin\Debug\Bunifu_UI_v1.52.dll
+C:\zooapp\ZooApp\obj\Debug\ZooApp.frmDashboard.resources
