@@ -16,7 +16,7 @@ namespace ZooApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new registerFrom());
+            Application.Run(new Form1());
         }
     }
 }
