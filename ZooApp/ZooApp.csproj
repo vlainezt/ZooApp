@@ -139,6 +139,7 @@
     <None Include="Resources\animal1.png" />
     <None Include="Resources\perfil1.png" />
     <None Include="Resources\logo2_tc.png" />
+    <Content Include=".gitignore" />
     <Content Include="Zoo.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

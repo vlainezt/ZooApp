@@ -10,7 +10,7 @@ namespace ZooApp
         private static SqlConnection conexion()
         {
             SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\zooapp\\ZooApp\\Zoo.mdf; Integrated Security = True");
-
+            //SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = |DataDirectory|\\Zoo.mdf; Integrated Security = True");
             return conn;
         }
 

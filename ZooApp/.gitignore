@@ -1,0 +1,6 @@
+﻿# carpetas ignoradas
+/bin
+
+# archivos ignorados
+*.mdf
+*.ldf
