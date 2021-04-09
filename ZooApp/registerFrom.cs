@@ -13,7 +13,7 @@ namespace ZooApp
 {
     public partial class registerFrom : Form
     {
-        Zoologico zooConfig = new Zoologico();
+        Login zooConfig = new Login();
         public registerFrom()
         {
             InitializeComponent();

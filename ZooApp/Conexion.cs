@@ -9,8 +9,7 @@ namespace ZooApp
 
         private static SqlConnection conexion()
         {
-            SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\zooapp\\ZooApp\\Zoo.mdf; Integrated Security = True");
-            //SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = |DataDirectory|\\Zoo.mdf; Integrated Security = True");
+            SqlConnection conn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = |DataDirectory|\\Zoo.mdf; Integrated Security = True");
             return conn;
         }
 
@@ -18,7 +17,7 @@ namespace ZooApp
         {
             SqlDataAdapter da = new SqlDataAdapter(query, conexion()); //Estableciendo puente
             DataSet ds = new DataSet();
-            da.Fill(ds, table); //LLenando nuestrp DataSet
+            da.Fill(ds, table); //LLenando nuestro DataSet
 
             return ds;
         }

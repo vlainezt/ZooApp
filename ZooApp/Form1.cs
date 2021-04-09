@@ -12,7 +12,7 @@ namespace ZooApp
 {
     public partial class Form1 : Form
     {
-        Zoologico zooConfig = new Zoologico();
+        Login zooConfig = new Login();
         public Form1()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace ZooApp
             string User = txtUserNameLogin.Text.Trim(),
                 Password = txxPasswordLogin.Text.Trim();
 
-            bool result = zooConfig.Login(User, Password);
+            bool result = zooConfig.Auth(User, Password);
 
             if (result)
             {

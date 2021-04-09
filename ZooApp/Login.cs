@@ -3,11 +3,11 @@ using System.Data;
 
 namespace ZooApp
 {
-    class Zoologico
+    class Login
     {
         Conexion conn = new Conexion();
 
-        public bool Login(string User, string Password)
+        public bool Auth(string User, string Password)
         {
             string query = String.Format("select * from Usrs where Usr='{0}' and Pass='{1}'", User, Password);
             DataRow[] dt = conn.readQuery(query, "Usrs", true);
