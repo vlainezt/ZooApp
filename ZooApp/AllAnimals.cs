@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ZooApp
 {
     public partial class AllAnimals : Form
     {
+
+        ControlAnimals control = new ControlAnimals();
+
         public AllAnimals()
         {
             InitializeComponent();
@@ -27,15 +24,52 @@ namespace ZooApp
             loadAnimal("Modificar Animal");
         }
 
-        private void loadAnimal(string letter)
+        public void Animal_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if(letter == "Modificar Animal")
+            getAnimals();
+        }
+
+        private void loadAnimal(string letter = "Nuevo")
+        {
+            if(letter == "Modificar")
             {
-                //aca se envian los datos al otro formulario
+                Animal animalF = new Animal();
+                animalF.lblAnimal.Text = letter;
+                animalF.FormClosed += Animal_FormClosed;
+                animalF.Show();
             }
-            Animal animalF = new Animal();
-            animalF.lblAnimal.Text = letter;
-            animalF.Show();
+            else
+            {
+                Animal animalF = new Animal();
+                animalF.lblAnimal.Text = letter;
+                animalF.FormClosed += Animal_FormClosed;
+                animalF.Show();
+            }
+            
+        }
+
+        private void AllAnimals_Load(object sender, EventArgs e)
+        {
+            getAnimals();
+        }
+
+        public void getAnimals()
+        {
+            DataSet ds = control.getAnimals();
+
+            dgvAnimalList.DataSource = ds.Tables[0].DefaultView;
+            dgvAnimalList.Columns[0].Visible = false;
+        }
+
+        private void dgvAnimalList_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            string Id = dgvAnimalList.Rows[e.RowIndex].Cells[2].Value.ToString(),
+                Nombre = dgvAnimalList.Rows[e.RowIndex].Cells[1].Value.ToString(),
+                NombreCientifico = dgvAnimalList.Rows[e.RowIndex].Cells[2].Value.ToString(),
+                Genero = dgvAnimalList.Rows[e.RowIndex].Cells[3].Value.ToString(),
+                Especie = dgvAnimalList.Rows[e.RowIndex].Cells[4].Value.ToString(),
+                Habitat = dgvAnimalList.Rows[e.RowIndex].Cells[5].Value.ToString(),
+                FechaNac = dgvAnimalList.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
     }
 }

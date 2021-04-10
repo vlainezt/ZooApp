@@ -58,6 +58,7 @@ namespace ZooApp
             this.dgvAnimalList.Name = "dgvAnimalList";
             this.dgvAnimalList.Size = new System.Drawing.Size(594, 407);
             this.dgvAnimalList.TabIndex = 14;
+            this.dgvAnimalList.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAnimalList_CellMouseDoubleClick);
             // 
             // btnAddAnimal
             // 
@@ -126,6 +127,7 @@ namespace ZooApp
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AllAnimals";
             this.Text = "AllAnimals";
+            this.Load += new System.EventHandler(this.AllAnimals_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnimalList)).EndInit();
             this.ResumeLayout(false);
 

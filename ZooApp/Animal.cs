@@ -1,18 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ZooApp
 {
     public partial class Animal : Form
     {
+
+        ControlAnimals control = new ControlAnimals();
+
         public Animal()
+        {
+            InitializeComponent();
+        }
+
+        public Animal(string id, string nombre, string nombreCientifico, string genero, string Especie, string Habitat, string FechaNac)
         {
             InitializeComponent();
         }
@@ -24,21 +26,46 @@ namespace ZooApp
 
         private void Animal_Load(object sender, EventArgs e)
         {
+            DataSet dsEspecie = control.getEspecie();
+            DataSet dsGenero = control.getGenero();
+            DataSet dsHabitat = control.getHabitat();
 
+            //ComboBox Genero
+            cbSex.DataSource = dsGenero.Tables[0];
+            cbSex.ValueMember = "IdGenero";
+            cbSex.DisplayMember = "Genero";
+
+            //ComboBox Especie
+            cbSpecies.DataSource = dsEspecie.Tables[0];
+            cbSpecies.ValueMember = "IdEspecie";
+            cbSpecies.DisplayMember = "Especie";
+
+            //ComboBox Habitat
+            cbHabitat.DataSource = dsHabitat.Tables[0];
+            cbHabitat.ValueMember = "IdHabitat";
+            cbHabitat.DisplayMember = "Habitat";
         }
 
-        private void lblAnimal_Click(object sender, EventArgs e)
+        private void btnSaveAnimal_Click(object sender, EventArgs e)
         {
+            string Nombre = txtAnimalName.Text,
+                NombreCientifico = txtAnimalNameC.Text,
+                FechaNac = txtFecha.Text;
 
-        }
+            int IdGenero = int.Parse(cbSex.SelectedValue.ToString()),
+                IdEspecie = int.Parse(cbSpecies.SelectedValue.ToString()),
+                IdHabitat = int.Parse(cbHabitat.SelectedValue.ToString());
 
-        private void txtAnimalNameC_OnValueChanged(object sender, EventArgs e)
-        {
+            bool resp = control.newAnimals(Nombre, NombreCientifico, IdGenero, IdEspecie, IdHabitat, FechaNac);
 
-        }
-
-        private void cbHabitat_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            if (resp)
+            {
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Error al insertar los datos");
+            }
 
         }
     }

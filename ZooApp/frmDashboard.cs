@@ -60,7 +60,7 @@ namespace ZooApp
             }
         }
 
-        private void changeForms(Object fh)
+        public void changeForms(Object fh)
         {
             if(pnlForms.Controls.Count > 0)
             {

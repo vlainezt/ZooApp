@@ -41,6 +41,7 @@ namespace ZooApp
             this.cbHabitat = new System.Windows.Forms.ComboBox();
             this.cbSpecies = new System.Windows.Forms.ComboBox();
             this.btnSaveAnimal = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.txtFecha = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.btnExitAnimal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +67,6 @@ namespace ZooApp
             this.lblAnimal.TabIndex = 13;
             this.lblAnimal.Text = "Agregar Animal";
             this.lblAnimal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblAnimal.Click += new System.EventHandler(this.lblAnimal_Click);
             // 
             // lblIdAnimal
             // 
@@ -128,7 +128,6 @@ namespace ZooApp
             this.txtAnimalNameC.Size = new System.Drawing.Size(303, 34);
             this.txtAnimalNameC.TabIndex = 16;
             this.txtAnimalNameC.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtAnimalNameC.OnValueChanged += new System.EventHandler(this.txtAnimalNameC_OnValueChanged);
             // 
             // cbSex
             // 
@@ -158,7 +157,6 @@ namespace ZooApp
             this.cbHabitat.Name = "cbHabitat";
             this.cbHabitat.Size = new System.Drawing.Size(303, 27);
             this.cbHabitat.TabIndex = 19;
-            this.cbHabitat.SelectedIndexChanged += new System.EventHandler(this.cbHabitat_SelectedIndexChanged);
             // 
             // cbSpecies
             // 
@@ -195,12 +193,34 @@ namespace ZooApp
             this.btnSaveAnimal.IdleFillColor = System.Drawing.SystemColors.Highlight;
             this.btnSaveAnimal.IdleForecolor = System.Drawing.SystemColors.ButtonFace;
             this.btnSaveAnimal.IdleLineColor = System.Drawing.SystemColors.HotTrack;
-            this.btnSaveAnimal.Location = new System.Drawing.Point(70, 380);
+            this.btnSaveAnimal.Location = new System.Drawing.Point(70, 403);
             this.btnSaveAnimal.Margin = new System.Windows.Forms.Padding(5);
             this.btnSaveAnimal.Name = "btnSaveAnimal";
             this.btnSaveAnimal.Size = new System.Drawing.Size(181, 41);
             this.btnSaveAnimal.TabIndex = 21;
             this.btnSaveAnimal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSaveAnimal.Click += new System.EventHandler(this.btnSaveAnimal_Click);
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFecha.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFecha.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFecha.ForeColor = System.Drawing.Color.White;
+            this.txtFecha.HintForeColor = System.Drawing.Color.White;
+            this.txtFecha.HintText = "Fecha de Nacimiento";
+            this.txtFecha.isPassword = false;
+            this.txtFecha.LineFocusedColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtFecha.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtFecha.LineMouseHoverColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtFecha.LineThickness = 4;
+            this.txtFecha.Location = new System.Drawing.Point(16, 361);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(303, 34);
+            this.txtFecha.TabIndex = 22;
+            this.txtFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Animal
             // 
@@ -208,6 +228,7 @@ namespace ZooApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(332, 458);
+            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.btnSaveAnimal);
             this.Controls.Add(this.cbSpecies);
             this.Controls.Add(this.cbHabitat);
@@ -239,6 +260,7 @@ namespace ZooApp
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtAnimalName;
         public System.Windows.Forms.ComboBox cbSpecies;
         public System.Windows.Forms.ComboBox cbHabitat;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnSaveAnimal;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtFecha;
+        public Bunifu.Framework.UI.BunifuThinButton2 btnSaveAnimal;
     }
 }
