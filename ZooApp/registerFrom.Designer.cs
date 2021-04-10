@@ -32,6 +32,7 @@ namespace ZooApp
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registerFrom));
             this.pnlContentRegister = new System.Windows.Forms.Panel();
+            this.btnRegisterUser = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtUserRoll = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtEmailUser = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtRepeatPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -39,7 +40,6 @@ namespace ZooApp
             this.txtUserNameRegister = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblRegister = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.erPUsers = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnRegisterUser = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pnlContentRegister.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erPUsers)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +58,34 @@ namespace ZooApp
             this.pnlContentRegister.Name = "pnlContentRegister";
             this.pnlContentRegister.Size = new System.Drawing.Size(645, 542);
             this.pnlContentRegister.TabIndex = 0;
+            // 
+            // btnRegisterUser
+            // 
+            this.btnRegisterUser.ActiveBorderThickness = 1;
+            this.btnRegisterUser.ActiveCornerRadius = 20;
+            this.btnRegisterUser.ActiveFillColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRegisterUser.ActiveForecolor = System.Drawing.Color.White;
+            this.btnRegisterUser.ActiveLineColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRegisterUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegisterUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnRegisterUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegisterUser.BackgroundImage")));
+            this.btnRegisterUser.ButtonText = "Crear Cuenta";
+            this.btnRegisterUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegisterUser.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterUser.ForeColor = System.Drawing.Color.Gray;
+            this.btnRegisterUser.IdleBorderThickness = 1;
+            this.btnRegisterUser.IdleCornerRadius = 20;
+            this.btnRegisterUser.IdleFillColor = System.Drawing.Color.White;
+            this.btnRegisterUser.IdleForecolor = System.Drawing.Color.Gray;
+            this.btnRegisterUser.IdleLineColor = System.Drawing.Color.Gray;
+            this.btnRegisterUser.Location = new System.Drawing.Point(226, 447);
+            this.btnRegisterUser.Margin = new System.Windows.Forms.Padding(5);
+            this.btnRegisterUser.Name = "btnRegisterUser";
+            this.btnRegisterUser.Size = new System.Drawing.Size(181, 45);
+            this.btnRegisterUser.TabIndex = 18;
+            this.btnRegisterUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
             // 
             // txtUserRoll
             // 
@@ -171,11 +199,12 @@ namespace ZooApp
             // 
             // lblRegister
             // 
+            this.lblRegister.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblRegister.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegister.ForeColor = System.Drawing.Color.White;
-            this.lblRegister.Location = new System.Drawing.Point(196, 25);
+            this.lblRegister.Location = new System.Drawing.Point(0, 0);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(234, 60);
+            this.lblRegister.Size = new System.Drawing.Size(645, 74);
             this.lblRegister.TabIndex = 12;
             this.lblRegister.Text = "Registrar usuario";
             this.lblRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -183,34 +212,6 @@ namespace ZooApp
             // erPUsers
             // 
             this.erPUsers.ContainerControl = this;
-            // 
-            // btnRegisterUser
-            // 
-            this.btnRegisterUser.ActiveBorderThickness = 1;
-            this.btnRegisterUser.ActiveCornerRadius = 20;
-            this.btnRegisterUser.ActiveFillColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnRegisterUser.ActiveForecolor = System.Drawing.Color.White;
-            this.btnRegisterUser.ActiveLineColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnRegisterUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRegisterUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnRegisterUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegisterUser.BackgroundImage")));
-            this.btnRegisterUser.ButtonText = "Crear Cuenta";
-            this.btnRegisterUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegisterUser.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterUser.ForeColor = System.Drawing.Color.Gray;
-            this.btnRegisterUser.IdleBorderThickness = 1;
-            this.btnRegisterUser.IdleCornerRadius = 20;
-            this.btnRegisterUser.IdleFillColor = System.Drawing.Color.White;
-            this.btnRegisterUser.IdleForecolor = System.Drawing.Color.Gray;
-            this.btnRegisterUser.IdleLineColor = System.Drawing.Color.Gray;
-            this.btnRegisterUser.Location = new System.Drawing.Point(226, 447);
-            this.btnRegisterUser.Margin = new System.Windows.Forms.Padding(5);
-            this.btnRegisterUser.Name = "btnRegisterUser";
-            this.btnRegisterUser.Size = new System.Drawing.Size(181, 45);
-            this.btnRegisterUser.TabIndex = 18;
-            this.btnRegisterUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
             // 
             // registerFrom
             // 

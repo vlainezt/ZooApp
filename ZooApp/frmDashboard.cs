@@ -86,5 +86,11 @@ namespace ZooApp
         {
             changeForms(new registerFrom());
         }
+
+        private void btnAnimales_Click(object sender, EventArgs e)
+        {
+            changeForms(new AllAnimals());
+
+        }
     }
 }

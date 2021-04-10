@@ -235,9 +235,10 @@
   <data name="pnlMenu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABySURBVChTfc3HDYAADEPRjEvvbUl6GyfYCKRIlINvT98i
-        za5SbyoVVq4qBZYvKtmsknKTSoK9I4yIgItHwD8UXygitMhe3iWicAC0pS8UENo7e2mR3wPayqMEQOR1
-        gLbyhdwTvpWuO6ITtoB/iCUip9UDjGnhMzbr1O4AAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACTSURBVChTYzCe+f+/wbQ///Wm/PqvPfH7f83+r//Vej79
+        V+58/1+x/e1/uZZX/2WaXvxnwKZIpesDiiLJ+qf/GYhRJF77+D8DNkXyra9RFIlUPfjPQIwioYp7/xmw
+        KZJqeIaiiL/09n8GdN8hmyRYfhesiKfoxn8GYhRxFVz7z4BNEcw6mCL23Mv/GYhRxJp98T8Acj37yPaQ
+        h64AAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="borderMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

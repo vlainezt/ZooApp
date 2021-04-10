@@ -67,6 +67,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllAnimals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllAnimals.Designer.cs">
+      <DependentUpon>AllAnimals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Animal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Animal.Designer.cs">
+      <DependentUpon>Animal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Animals.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Form1.cs">
@@ -96,6 +108,12 @@
       <DependentUpon>registerFrom.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs" />
+    <EmbeddedResource Include="AllAnimals.resx">
+      <DependentUpon>AllAnimals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Animal.resx">
+      <DependentUpon>Animal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,8 +154,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Zoo_log.ldf">
-      <DependentUpon>Zoo.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Zoo.mdf</DependentUpon>
     </Content>
     <None Include="Resources\close.png" />
     <None Include="Resources\minimize.png" />

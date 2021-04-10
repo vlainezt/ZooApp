@@ -32,3 +32,5 @@ C:\Instructoria\ZooApp\ZooApp\obj\Debug\ZooApp.csproj.CoreCompileInputs.cache
 C:\Instructoria\ZooApp\ZooApp\obj\Debug\ZooApp.csproj.CopyComplete
 C:\Instructoria\ZooApp\ZooApp\obj\Debug\ZooApp.exe
 C:\Instructoria\ZooApp\ZooApp\obj\Debug\ZooApp.pdb
+C:\ZooApp\ZooApp\obj\Debug\ZooApp.AllAnimals.resources
+C:\ZooApp\ZooApp\obj\Debug\ZooApp.Animal.resources
