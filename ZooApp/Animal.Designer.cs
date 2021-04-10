@@ -41,6 +41,7 @@ namespace ZooApp
             this.cbHabitat = new System.Windows.Forms.ComboBox();
             this.cbSpecies = new System.Windows.Forms.ComboBox();
             this.btnSaveAnimal = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.txtAnimalDate = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.btnExitAnimal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -195,19 +196,42 @@ namespace ZooApp
             this.btnSaveAnimal.IdleFillColor = System.Drawing.SystemColors.Highlight;
             this.btnSaveAnimal.IdleForecolor = System.Drawing.SystemColors.ButtonFace;
             this.btnSaveAnimal.IdleLineColor = System.Drawing.SystemColors.HotTrack;
-            this.btnSaveAnimal.Location = new System.Drawing.Point(70, 380);
+            this.btnSaveAnimal.Location = new System.Drawing.Point(73, 418);
             this.btnSaveAnimal.Margin = new System.Windows.Forms.Padding(5);
             this.btnSaveAnimal.Name = "btnSaveAnimal";
             this.btnSaveAnimal.Size = new System.Drawing.Size(181, 41);
             this.btnSaveAnimal.TabIndex = 21;
             this.btnSaveAnimal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSaveAnimal.Click += new System.EventHandler(this.btnSaveAnimal_Click);
+            // 
+            // txtAnimalDate
+            // 
+            this.txtAnimalDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAnimalDate.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAnimalDate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnimalDate.ForeColor = System.Drawing.Color.White;
+            this.txtAnimalDate.HintForeColor = System.Drawing.Color.White;
+            this.txtAnimalDate.HintText = "Fecha de Nacimiento";
+            this.txtAnimalDate.isPassword = false;
+            this.txtAnimalDate.LineFocusedColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtAnimalDate.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtAnimalDate.LineMouseHoverColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtAnimalDate.LineThickness = 4;
+            this.txtAnimalDate.Location = new System.Drawing.Point(17, 370);
+            this.txtAnimalDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAnimalDate.Name = "txtAnimalDate";
+            this.txtAnimalDate.Size = new System.Drawing.Size(303, 34);
+            this.txtAnimalDate.TabIndex = 22;
+            this.txtAnimalDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Animal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(332, 458);
+            this.ClientSize = new System.Drawing.Size(332, 473);
+            this.Controls.Add(this.txtAnimalDate);
             this.Controls.Add(this.btnSaveAnimal);
             this.Controls.Add(this.cbSpecies);
             this.Controls.Add(this.cbHabitat);
@@ -240,5 +264,6 @@ namespace ZooApp
         public System.Windows.Forms.ComboBox cbSpecies;
         public System.Windows.Forms.ComboBox cbHabitat;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSaveAnimal;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtAnimalDate;
     }
 }

@@ -33,7 +33,6 @@ namespace ZooApp
             this.lblAnimals = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dgvAnimalList = new System.Windows.Forms.DataGridView();
             this.btnAddAnimal = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnModify = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnimalList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +57,7 @@ namespace ZooApp
             this.dgvAnimalList.Name = "dgvAnimalList";
             this.dgvAnimalList.Size = new System.Drawing.Size(594, 407);
             this.dgvAnimalList.TabIndex = 14;
+            this.dgvAnimalList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAnimalList_CellDoubleClick);
             // 
             // btnAddAnimal
             // 
@@ -86,46 +86,19 @@ namespace ZooApp
             this.btnAddAnimal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAddAnimal.Click += new System.EventHandler(this.btnAddAnimal_Click);
             // 
-            // btnModify
-            // 
-            this.btnModify.ActiveBorderThickness = 1;
-            this.btnModify.ActiveCornerRadius = 20;
-            this.btnModify.ActiveFillColor = System.Drawing.SystemColors.HotTrack;
-            this.btnModify.ActiveForecolor = System.Drawing.Color.White;
-            this.btnModify.ActiveLineColor = System.Drawing.SystemColors.HotTrack;
-            this.btnModify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnModify.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModify.BackgroundImage")));
-            this.btnModify.ButtonText = "Modificar";
-            this.btnModify.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModify.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModify.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnModify.IdleBorderThickness = 1;
-            this.btnModify.IdleCornerRadius = 20;
-            this.btnModify.IdleFillColor = System.Drawing.SystemColors.Highlight;
-            this.btnModify.IdleForecolor = System.Drawing.SystemColors.ButtonFace;
-            this.btnModify.IdleLineColor = System.Drawing.SystemColors.HotTrack;
-            this.btnModify.Location = new System.Drawing.Point(246, 487);
-            this.btnModify.Margin = new System.Windows.Forms.Padding(5);
-            this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(181, 41);
-            this.btnModify.TabIndex = 16;
-            this.btnModify.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
-            // 
             // AllAnimals
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(645, 542);
-            this.Controls.Add(this.btnModify);
             this.Controls.Add(this.btnAddAnimal);
             this.Controls.Add(this.dgvAnimalList);
             this.Controls.Add(this.lblAnimals);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AllAnimals";
             this.Text = "AllAnimals";
+            this.Load += new System.EventHandler(this.AllAnimals_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnimalList)).EndInit();
             this.ResumeLayout(false);
 
@@ -136,6 +109,5 @@ namespace ZooApp
         private Bunifu.Framework.UI.BunifuCustomLabel lblAnimals;
         private System.Windows.Forms.DataGridView dgvAnimalList;
         private Bunifu.Framework.UI.BunifuThinButton2 btnAddAnimal;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnModify;
     }
 }
