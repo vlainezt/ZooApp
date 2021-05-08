@@ -13,6 +13,18 @@ namespace ZooApp
             return conn.setData(Query);
         }
 
+        public bool updateAnimal(int IdAnimal, string Nombre, string NombreCientifico, int IdGenero, int IdEspecie, int IdHabitat, string FechaNac)
+        {
+            string Query = string.Format("UPDATE Animals SET Nombre = '{0}', NombreCientifico = '{1}', IdGenero = {2}, IdEspecie = {3}, IdHabitat = {4}, FechaNac = '{5}' WHERE IdAnimal = {6}", Nombre, NombreCientifico, IdGenero, IdEspecie, IdHabitat, FechaNac, IdAnimal);
+            return conn.setData(Query);
+        }
+
+        public bool removeAnimal(int IdAnimal)
+        {
+            string Query = string.Format("DELETE FROM Animals WHERE IdAnimal = {0}", IdAnimal);
+            return conn.setData(Query);
+        }
+
         public DataSet getAnimals()
         {
             string Query = "SELECT IdAnimal, Genero.IdGenero, Especie.IdEspecie, Habitat.IdHabitat, Nombre, NombreCientifico, Genero, Especie, Habitat, FechaNac FROM Animals, Especie, Genero, Habitat WHERE Animals.IdGenero = Genero.IdGenero AND Animals.IdEspecie = Especie.IdEspecie AND Animals.IdHabitat = Habitat.IdHabitat";

@@ -74,7 +74,15 @@ namespace ZooApp
                 cbSex.SelectedValue = genero;
                 cbSpecies.SelectedValue = especie;
                 cbHabitat.SelectedValue = habitat;
+
+                // Cambiar el valor del boton Guardar
+                btnSaveAnimal.ButtonText = "Actualizar";
+
+                //Ocultar el boton de eliminar
+                btnDeleteAnimal.Visible = true;
+
             }
+
 
         }
 
@@ -105,7 +113,10 @@ namespace ZooApp
                 IdEspecie = int.Parse(cbSpecies.SelectedValue.ToString()),
                 IdHabitat = int.Parse(cbHabitat.SelectedValue.ToString());
 
-            bool isSave = Control.newAnimal(Nombre, NombreCientifico, IdGenero, IdEspecie, IdHabitat, FechaNac);
+            bool isSave = 
+                Mode == "New" 
+                ? Control.newAnimal(Nombre, NombreCientifico, IdGenero, IdEspecie, IdHabitat, FechaNac) 
+                : Control.updateAnimal(Id, Nombre, NombreCientifico, IdGenero, IdEspecie, IdHabitat, FechaNac);
 
             if (isSave)
             {
@@ -118,6 +129,26 @@ namespace ZooApp
                 MessageBox.Show("Error al almacenar un nuevo animal");
             }
 
+        }
+
+        private void btnDeleteAnimal_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Estas seguro de eliminar el animal?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (result == DialogResult.Yes)
+            {
+                bool response = Control.removeAnimal(Id);
+
+                if (response)
+                {
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Error al eliminar el animal");
+                }
+
+            }
         }
     }
 }

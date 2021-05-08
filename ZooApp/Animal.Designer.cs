@@ -191,6 +191,7 @@ namespace ZooApp
             // btnDeleteAnimal
             // 
             this.btnDeleteAnimal.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteAnimal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteAnimal.Image = global::ZooApp.Properties.Resources.delete;
             this.btnDeleteAnimal.ImageActive = null;
             this.btnDeleteAnimal.Location = new System.Drawing.Point(287, 423);
@@ -199,7 +200,9 @@ namespace ZooApp
             this.btnDeleteAnimal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnDeleteAnimal.TabIndex = 23;
             this.btnDeleteAnimal.TabStop = false;
+            this.btnDeleteAnimal.Visible = false;
             this.btnDeleteAnimal.Zoom = 10;
+            this.btnDeleteAnimal.Click += new System.EventHandler(this.btnDeleteAnimal_Click);
             // 
             // btnSaveAnimal
             // 
