@@ -36,3 +36,22 @@ C:\ZooApp\ZooApp\obj\Debug\ZooApp.AllAnimals.resources
 C:\ZooApp\ZooApp\obj\Debug\ZooApp.Animal.resources
 C:\Instructoria\ZooApp\ZooApp\obj\Debug\ZooApp.AllAnimals.resources
 C:\Instructoria\ZooApp\ZooApp\obj\Debug\ZooApp.Animal.resources
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\bin\Debug\Zoo.mdf
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\bin\Debug\Zoo_log.ldf
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\bin\Debug\ZooApp.exe.config
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\bin\Debug\ZooApp.exe
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\bin\Debug\ZooApp.pdb
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\bin\Debug\Bunifu_UI_v1.52.dll
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\obj\Debug\ZooApp.csprojAssemblyReference.cache
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\obj\Debug\ZooApp.AllAnimals.resources
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\obj\Debug\ZooApp.Animal.resources
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\obj\Debug\ZooApp.Form1.resources
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\obj\Debug\ZooApp.frmDashboard.resources
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\obj\Debug\ZooApp.frmInicio.resources
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\obj\Debug\ZooApp.Properties.Resources.resources
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\obj\Debug\ZooApp.registerFrom.resources
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\obj\Debug\ZooApp.csproj.GenerateResource.cache
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\obj\Debug\ZooApp.csproj.CoreCompileInputs.cache
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\obj\Debug\ZooApp.csproj.CopyComplete
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\obj\Debug\ZooApp.exe
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\obj\Debug\ZooApp.pdb

@@ -52,6 +52,7 @@ namespace ZooApp
             cbSex.DataSource = dsGenero.Tables[0];
             cbSex.DisplayMember = "Genero";
             cbSex.ValueMember = "IdGenero";
+            
 
             //ComboBox Especie
             cbSpecies.DataSource = dsEspecie.Tables[0];

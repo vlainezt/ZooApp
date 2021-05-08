@@ -150,6 +150,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\delete.png" />
     <Content Include="Zoo.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
