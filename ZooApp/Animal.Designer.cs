@@ -31,7 +31,6 @@ namespace ZooApp
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Animal));
-            this.btnExitAnimal = new System.Windows.Forms.PictureBox();
             this.lblAnimal = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblIdAnimal = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.controllerAnimalForm = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -40,22 +39,13 @@ namespace ZooApp
             this.cbSex = new System.Windows.Forms.ComboBox();
             this.cbHabitat = new System.Windows.Forms.ComboBox();
             this.cbSpecies = new System.Windows.Forms.ComboBox();
-            this.btnSaveAnimal = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtAnimalDate = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btnDeleteAnimal = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnSaveAnimal = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnExitAnimal = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteAnimal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExitAnimal)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnExitAnimal
-            // 
-            this.btnExitAnimal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExitAnimal.Image = global::ZooApp.Properties.Resources.close;
-            this.btnExitAnimal.Location = new System.Drawing.Point(305, 2);
-            this.btnExitAnimal.Name = "btnExitAnimal";
-            this.btnExitAnimal.Size = new System.Drawing.Size(25, 25);
-            this.btnExitAnimal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnExitAnimal.TabIndex = 3;
-            this.btnExitAnimal.TabStop = false;
-            this.btnExitAnimal.Click += new System.EventHandler(this.btnExitAnimal_Click);
             // 
             // lblAnimal
             // 
@@ -177,6 +167,40 @@ namespace ZooApp
             this.cbSpecies.Size = new System.Drawing.Size(303, 27);
             this.cbSpecies.TabIndex = 20;
             // 
+            // txtAnimalDate
+            // 
+            this.txtAnimalDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAnimalDate.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAnimalDate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnimalDate.ForeColor = System.Drawing.Color.White;
+            this.txtAnimalDate.HintForeColor = System.Drawing.Color.White;
+            this.txtAnimalDate.HintText = "Fecha de Nacimiento";
+            this.txtAnimalDate.isPassword = false;
+            this.txtAnimalDate.LineFocusedColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtAnimalDate.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtAnimalDate.LineMouseHoverColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtAnimalDate.LineThickness = 4;
+            this.txtAnimalDate.Location = new System.Drawing.Point(17, 370);
+            this.txtAnimalDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAnimalDate.Name = "txtAnimalDate";
+            this.txtAnimalDate.Size = new System.Drawing.Size(303, 34);
+            this.txtAnimalDate.TabIndex = 22;
+            this.txtAnimalDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnDeleteAnimal
+            // 
+            this.btnDeleteAnimal.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteAnimal.Image = global::ZooApp.Properties.Resources.delete;
+            this.btnDeleteAnimal.ImageActive = null;
+            this.btnDeleteAnimal.Location = new System.Drawing.Point(287, 423);
+            this.btnDeleteAnimal.Name = "btnDeleteAnimal";
+            this.btnDeleteAnimal.Size = new System.Drawing.Size(30, 30);
+            this.btnDeleteAnimal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDeleteAnimal.TabIndex = 23;
+            this.btnDeleteAnimal.TabStop = false;
+            this.btnDeleteAnimal.Zoom = 10;
+            // 
             // btnSaveAnimal
             // 
             this.btnSaveAnimal.ActiveBorderThickness = 1;
@@ -204,26 +228,17 @@ namespace ZooApp
             this.btnSaveAnimal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSaveAnimal.Click += new System.EventHandler(this.btnSaveAnimal_Click);
             // 
-            // txtAnimalDate
+            // btnExitAnimal
             // 
-            this.txtAnimalDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAnimalDate.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAnimalDate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnimalDate.ForeColor = System.Drawing.Color.White;
-            this.txtAnimalDate.HintForeColor = System.Drawing.Color.White;
-            this.txtAnimalDate.HintText = "Fecha de Nacimiento";
-            this.txtAnimalDate.isPassword = false;
-            this.txtAnimalDate.LineFocusedColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtAnimalDate.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtAnimalDate.LineMouseHoverColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtAnimalDate.LineThickness = 4;
-            this.txtAnimalDate.Location = new System.Drawing.Point(17, 370);
-            this.txtAnimalDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtAnimalDate.Name = "txtAnimalDate";
-            this.txtAnimalDate.Size = new System.Drawing.Size(303, 34);
-            this.txtAnimalDate.TabIndex = 22;
-            this.txtAnimalDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnExitAnimal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExitAnimal.Image = global::ZooApp.Properties.Resources.close;
+            this.btnExitAnimal.Location = new System.Drawing.Point(305, 2);
+            this.btnExitAnimal.Name = "btnExitAnimal";
+            this.btnExitAnimal.Size = new System.Drawing.Size(25, 25);
+            this.btnExitAnimal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnExitAnimal.TabIndex = 3;
+            this.btnExitAnimal.TabStop = false;
+            this.btnExitAnimal.Click += new System.EventHandler(this.btnExitAnimal_Click);
             // 
             // Animal
             // 
@@ -231,6 +246,7 @@ namespace ZooApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(332, 473);
+            this.Controls.Add(this.btnDeleteAnimal);
             this.Controls.Add(this.txtAnimalDate);
             this.Controls.Add(this.btnSaveAnimal);
             this.Controls.Add(this.cbSpecies);
@@ -247,6 +263,7 @@ namespace ZooApp
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Animal";
             this.Load += new System.EventHandler(this.Animal_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteAnimal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExitAnimal)).EndInit();
             this.ResumeLayout(false);
 
@@ -265,5 +282,6 @@ namespace ZooApp
         public System.Windows.Forms.ComboBox cbHabitat;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSaveAnimal;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtAnimalDate;
+        private Bunifu.Framework.UI.BunifuImageButton btnDeleteAnimal;
     }
 }

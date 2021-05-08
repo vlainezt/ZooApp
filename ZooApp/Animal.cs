@@ -52,6 +52,7 @@ namespace ZooApp
             cbSex.DataSource = dsGenero.Tables[0];
             cbSex.DisplayMember = "Genero";
             cbSex.ValueMember = "IdGenero";
+            
 
             //ComboBox Especie
             cbSpecies.DataSource = dsEspecie.Tables[0];
@@ -62,12 +63,17 @@ namespace ZooApp
             cbHabitat.DataSource = dsHabitat.Tables[0];
             cbHabitat.DisplayMember = "Habitat";
             cbHabitat.ValueMember = "IdHabitat";
-
+            
             if (Mode == "Update")
-            {
+            { 
                 txtAnimalName.Text = nombre;
                 txtAnimalNameC.Text = nombreC;
                 txtAnimalDate.Text = fechaNac;
+
+                //Seleccionar el valor
+                cbSex.SelectedValue = genero;
+                cbSpecies.SelectedValue = especie;
+                cbHabitat.SelectedValue = habitat;
             }
 
         }
