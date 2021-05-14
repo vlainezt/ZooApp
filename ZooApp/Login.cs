@@ -28,5 +28,42 @@ namespace ZooApp
 
             return set;
         }
+
+        public bool VerifyEmail(string email)
+        {
+            string query = String.Format("SELECT * FROM Usrs WHERE Usr='{0}'", email);
+            DataRow[] dt = conn.readQuery(query, "Usrs", true);
+
+            return dt.Length == 1 ? true : false;
+
+        }
+
+        public bool changePassword (string newPassword, string email)
+        {
+            string query = String.Format("SELECT * FROM Usrs WHERE Usr='{0}'", email);
+            DataRow[] dt = conn.readQuery(query, "Usrs", true);
+
+            if (dt.Length == 1)
+            {
+                DataRow dtAlone = dt[0];
+                int identifier = int.Parse(dtAlone[0].ToString().Trim());
+
+                return updatePassword(newPassword, identifier);
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        private bool updatePassword(string password, int id)
+        {
+            string query = String.Format("UPDATE Usrs SET Pass = '{0}' WHERE Id={1}", password, id);
+            bool isInsert = conn.setData(query);
+
+            return isInsert;
+
+        }
     }
 }
