@@ -32,10 +32,10 @@ namespace ZooApp
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecoverEmail));
             this.pnlControllerRecPass = new System.Windows.Forms.Panel();
+            this.lblnaamee = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnCloseRevEmail = new System.Windows.Forms.PictureBox();
             this.txtRecoverEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnSendRecoverEmail = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.lblnaamee = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.Controller = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pnlControllerRecPass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseRevEmail)).BeginInit();
@@ -51,6 +51,17 @@ namespace ZooApp
             this.pnlControllerRecPass.Name = "pnlControllerRecPass";
             this.pnlControllerRecPass.Size = new System.Drawing.Size(527, 35);
             this.pnlControllerRecPass.TabIndex = 0;
+            // 
+            // lblnaamee
+            // 
+            this.lblnaamee.AutoSize = true;
+            this.lblnaamee.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnaamee.ForeColor = System.Drawing.Color.White;
+            this.lblnaamee.Location = new System.Drawing.Point(12, 9);
+            this.lblnaamee.Name = "lblnaamee";
+            this.lblnaamee.Size = new System.Drawing.Size(251, 20);
+            this.lblnaamee.TabIndex = 12;
+            this.lblnaamee.Text = "rEcuperando Contraseña...";
             // 
             // btnCloseRevEmail
             // 
@@ -107,17 +118,7 @@ namespace ZooApp
             this.btnSendRecoverEmail.Size = new System.Drawing.Size(181, 45);
             this.btnSendRecoverEmail.TabIndex = 11;
             this.btnSendRecoverEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblnaamee
-            // 
-            this.lblnaamee.AutoSize = true;
-            this.lblnaamee.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnaamee.ForeColor = System.Drawing.Color.White;
-            this.lblnaamee.Location = new System.Drawing.Point(12, 9);
-            this.lblnaamee.Name = "lblnaamee";
-            this.lblnaamee.Size = new System.Drawing.Size(251, 20);
-            this.lblnaamee.TabIndex = 12;
-            this.lblnaamee.Text = "rEcuperando Contraseña...";
+            this.btnSendRecoverEmail.Click += new System.EventHandler(this.btnSendRecoverEmail_Click);
             // 
             // Controller
             // 
