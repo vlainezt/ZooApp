@@ -47,5 +47,12 @@ namespace ZooApp
             }
 
         }
+
+        private void forgotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RecoverEmail REform = new RecoverEmail();
+            REform.Show();
+
+        }
     }
 }

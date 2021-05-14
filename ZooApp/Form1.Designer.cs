@@ -31,17 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnlControlLogin = new System.Windows.Forms.Panel();
             this.lblAppName = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnMInimizedLogin = new System.Windows.Forms.PictureBox();
-            this.btnExitLogin = new System.Windows.Forms.PictureBox();
             this.pnlContentLogin = new System.Windows.Forms.Panel();
-            this.btnLogear = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txxPasswordLogin = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtUserNameLogin = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblLogin = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btnLogear = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnMInimizedLogin = new System.Windows.Forms.PictureBox();
+            this.btnExitLogin = new System.Windows.Forms.PictureBox();
+            this.forgotPass = new System.Windows.Forms.LinkLabel();
             this.pnlControlLogin.SuspendLayout();
+            this.pnlContentLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMInimizedLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExitLogin)).BeginInit();
-            this.pnlContentLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlControlLogin
@@ -67,32 +68,9 @@
             this.lblAppName.TabIndex = 0;
             this.lblAppName.Text = "Tukano Zoo ";
             // 
-            // btnMInimizedLogin
-            // 
-            this.btnMInimizedLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMInimizedLogin.Image = global::ZooApp.Properties.Resources.minimize;
-            this.btnMInimizedLogin.Location = new System.Drawing.Point(531, 12);
-            this.btnMInimizedLogin.Name = "btnMInimizedLogin";
-            this.btnMInimizedLogin.Size = new System.Drawing.Size(25, 25);
-            this.btnMInimizedLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMInimizedLogin.TabIndex = 1;
-            this.btnMInimizedLogin.TabStop = false;
-            this.btnMInimizedLogin.Click += new System.EventHandler(this.btnMInimizedLogin_Click);
-            // 
-            // btnExitLogin
-            // 
-            this.btnExitLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExitLogin.Image = global::ZooApp.Properties.Resources.close;
-            this.btnExitLogin.Location = new System.Drawing.Point(562, 12);
-            this.btnExitLogin.Name = "btnExitLogin";
-            this.btnExitLogin.Size = new System.Drawing.Size(25, 25);
-            this.btnExitLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnExitLogin.TabIndex = 0;
-            this.btnExitLogin.TabStop = false;
-            this.btnExitLogin.Click += new System.EventHandler(this.btnExitLogin_Click);
-            // 
             // pnlContentLogin
             // 
+            this.pnlContentLogin.Controls.Add(this.forgotPass);
             this.pnlContentLogin.Controls.Add(this.btnLogear);
             this.pnlContentLogin.Controls.Add(this.txxPasswordLogin);
             this.pnlContentLogin.Controls.Add(this.txtUserNameLogin);
@@ -102,32 +80,6 @@
             this.pnlContentLogin.Name = "pnlContentLogin";
             this.pnlContentLogin.Size = new System.Drawing.Size(600, 351);
             this.pnlContentLogin.TabIndex = 1;
-            // 
-            // btnLogear
-            // 
-            this.btnLogear.ActiveBorderThickness = 1;
-            this.btnLogear.ActiveCornerRadius = 20;
-            this.btnLogear.ActiveFillColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnLogear.ActiveForecolor = System.Drawing.Color.White;
-            this.btnLogear.ActiveLineColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnLogear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.btnLogear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogear.BackgroundImage")));
-            this.btnLogear.ButtonText = "Iniciar Sesión";
-            this.btnLogear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogear.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogear.ForeColor = System.Drawing.Color.Gray;
-            this.btnLogear.IdleBorderThickness = 1;
-            this.btnLogear.IdleCornerRadius = 20;
-            this.btnLogear.IdleFillColor = System.Drawing.Color.White;
-            this.btnLogear.IdleForecolor = System.Drawing.Color.Gray;
-            this.btnLogear.IdleLineColor = System.Drawing.Color.Gray;
-            this.btnLogear.Location = new System.Drawing.Point(200, 263);
-            this.btnLogear.Margin = new System.Windows.Forms.Padding(5);
-            this.btnLogear.Name = "btnLogear";
-            this.btnLogear.Size = new System.Drawing.Size(181, 45);
-            this.btnLogear.TabIndex = 10;
-            this.btnLogear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnLogear.Click += new System.EventHandler(this.btnLogear_Click);
             // 
             // txxPasswordLogin
             // 
@@ -178,6 +130,70 @@
             this.lblLogin.TabIndex = 2;
             this.lblLogin.Text = "login";
             // 
+            // btnLogear
+            // 
+            this.btnLogear.ActiveBorderThickness = 1;
+            this.btnLogear.ActiveCornerRadius = 20;
+            this.btnLogear.ActiveFillColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLogear.ActiveForecolor = System.Drawing.Color.White;
+            this.btnLogear.ActiveLineColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLogear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.btnLogear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogear.BackgroundImage")));
+            this.btnLogear.ButtonText = "Iniciar Sesión";
+            this.btnLogear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogear.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogear.ForeColor = System.Drawing.Color.Gray;
+            this.btnLogear.IdleBorderThickness = 1;
+            this.btnLogear.IdleCornerRadius = 20;
+            this.btnLogear.IdleFillColor = System.Drawing.Color.White;
+            this.btnLogear.IdleForecolor = System.Drawing.Color.Gray;
+            this.btnLogear.IdleLineColor = System.Drawing.Color.Gray;
+            this.btnLogear.Location = new System.Drawing.Point(210, 247);
+            this.btnLogear.Margin = new System.Windows.Forms.Padding(5);
+            this.btnLogear.Name = "btnLogear";
+            this.btnLogear.Size = new System.Drawing.Size(181, 45);
+            this.btnLogear.TabIndex = 10;
+            this.btnLogear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogear.Click += new System.EventHandler(this.btnLogear_Click);
+            // 
+            // btnMInimizedLogin
+            // 
+            this.btnMInimizedLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMInimizedLogin.Image = global::ZooApp.Properties.Resources.minimize;
+            this.btnMInimizedLogin.Location = new System.Drawing.Point(531, 12);
+            this.btnMInimizedLogin.Name = "btnMInimizedLogin";
+            this.btnMInimizedLogin.Size = new System.Drawing.Size(25, 25);
+            this.btnMInimizedLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMInimizedLogin.TabIndex = 1;
+            this.btnMInimizedLogin.TabStop = false;
+            this.btnMInimizedLogin.Click += new System.EventHandler(this.btnMInimizedLogin_Click);
+            // 
+            // btnExitLogin
+            // 
+            this.btnExitLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExitLogin.Image = global::ZooApp.Properties.Resources.close;
+            this.btnExitLogin.Location = new System.Drawing.Point(562, 12);
+            this.btnExitLogin.Name = "btnExitLogin";
+            this.btnExitLogin.Size = new System.Drawing.Size(25, 25);
+            this.btnExitLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnExitLogin.TabIndex = 0;
+            this.btnExitLogin.TabStop = false;
+            this.btnExitLogin.Click += new System.EventHandler(this.btnExitLogin_Click);
+            // 
+            // forgotPass
+            // 
+            this.forgotPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.forgotPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forgotPass.LinkColor = System.Drawing.Color.DeepSkyBlue;
+            this.forgotPass.Location = new System.Drawing.Point(0, 286);
+            this.forgotPass.Name = "forgotPass";
+            this.forgotPass.Size = new System.Drawing.Size(600, 56);
+            this.forgotPass.TabIndex = 11;
+            this.forgotPass.TabStop = true;
+            this.forgotPass.Text = "Olvidé mi contraseña";
+            this.forgotPass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.forgotPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.forgotPass_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,10 +208,10 @@
             this.Text = "Form1";
             this.pnlControlLogin.ResumeLayout(false);
             this.pnlControlLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMInimizedLogin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExitLogin)).EndInit();
             this.pnlContentLogin.ResumeLayout(false);
             this.pnlContentLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMInimizedLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExitLogin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -211,6 +227,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lblLogin;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txxPasswordLogin;
         private Bunifu.Framework.UI.BunifuThinButton2 btnLogear;
+        private System.Windows.Forms.LinkLabel forgotPass;
     }
 }
 
