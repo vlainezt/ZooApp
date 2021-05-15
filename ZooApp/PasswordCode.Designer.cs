@@ -31,10 +31,10 @@ namespace ZooApp
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PasswordCode));
             this.pnlControllerRecPass = new System.Windows.Forms.Panel();
+            this.lblAppName = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnClosePassCode = new System.Windows.Forms.PictureBox();
             this.txtPassCode = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnPassCode = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.lblAppName = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnlControllerRecPass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClosePassCode)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +49,17 @@ namespace ZooApp
             this.pnlControllerRecPass.Name = "pnlControllerRecPass";
             this.pnlControllerRecPass.Size = new System.Drawing.Size(189, 35);
             this.pnlControllerRecPass.TabIndex = 1;
+            // 
+            // lblAppName
+            // 
+            this.lblAppName.AutoSize = true;
+            this.lblAppName.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppName.ForeColor = System.Drawing.Color.White;
+            this.lblAppName.Location = new System.Drawing.Point(3, 12);
+            this.lblAppName.Name = "lblAppName";
+            this.lblAppName.Size = new System.Drawing.Size(150, 16);
+            this.lblAppName.TabIndex = 13;
+            this.lblAppName.Text = "Revisa tu correo...";
             // 
             // btnClosePassCode
             // 
@@ -105,17 +116,7 @@ namespace ZooApp
             this.btnPassCode.Size = new System.Drawing.Size(181, 45);
             this.btnPassCode.TabIndex = 12;
             this.btnPassCode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblAppName
-            // 
-            this.lblAppName.AutoSize = true;
-            this.lblAppName.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppName.ForeColor = System.Drawing.Color.White;
-            this.lblAppName.Location = new System.Drawing.Point(3, 12);
-            this.lblAppName.Name = "lblAppName";
-            this.lblAppName.Size = new System.Drawing.Size(150, 16);
-            this.lblAppName.TabIndex = 13;
-            this.lblAppName.Text = "Revisa tu correo...";
+            this.btnPassCode.Click += new System.EventHandler(this.btnPassCode_Click);
             // 
             // PasswordCode
             // 

@@ -12,14 +12,37 @@ namespace ZooApp
 {
     public partial class PasswordCode : Form
     {
-        public PasswordCode()
+        private string emailRecover;
+        private int codeSave;
+
+        public PasswordCode( int code, string emailRecover )
         {
             InitializeComponent();
+
+            this.emailRecover = emailRecover;
+            this.codeSave = code;
         }
 
         private void btnCloseRevEmail_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnPassCode_Click(object sender, EventArgs e)
+        {
+            string verifiedCode = txtPassCode.Text.Trim();
+
+            if(codeSave.ToString() == verifiedCode)
+            {
+                frmChangePass changePass = new frmChangePass(emailRecover);
+                changePass.Show();
+
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Codigo invalido", "Recuperando contraseña", MessageBoxButtons.OK);
+            }
         }
     }
 }

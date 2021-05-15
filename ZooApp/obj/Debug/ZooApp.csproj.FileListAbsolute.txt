@@ -57,3 +57,4 @@ E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\ob
 E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\obj\Debug\ZooApp.pdb
 E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\obj\Debug\ZooApp.RecoverEmail.resources
 E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\obj\Debug\ZooApp.PasswordCode.resources
+E:\DocDouglas\Gestion de Proyectos Informaticos\Inscructorias\proyecto\ZooApp\obj\Debug\ZooApp.frmChangePass.resources

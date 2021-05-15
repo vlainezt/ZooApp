@@ -139,12 +139,11 @@ namespace ZooApp
             this.txtRepeatPass.LineIdleColor = System.Drawing.Color.Gray;
             this.txtRepeatPass.LineMouseHoverColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtRepeatPass.LineThickness = 4;
-            this.txtRepeatPass.Location = new System.Drawing.Point(26, 131);
+            this.txtRepeatPass.Location = new System.Drawing.Point(26, 162);
             this.txtRepeatPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRepeatPass.Name = "txtRepeatPass";
             this.txtRepeatPass.Size = new System.Drawing.Size(473, 52);
             this.txtRepeatPass.TabIndex = 12;
-            this.txtRepeatPass.Text = "Confirme la contraseña";
             this.txtRepeatPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // frmChangePass
