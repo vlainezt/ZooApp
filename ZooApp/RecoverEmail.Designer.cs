@@ -33,10 +33,10 @@ namespace ZooApp
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecoverEmail));
             this.pnlControllerRecPass = new System.Windows.Forms.Panel();
             this.lblnaamee = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnCloseRevEmail = new System.Windows.Forms.PictureBox();
             this.txtRecoverEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.btnSendRecoverEmail = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Controller = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.btnSendRecoverEmail = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnCloseRevEmail = new System.Windows.Forms.PictureBox();
             this.pnlControllerRecPass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseRevEmail)).BeginInit();
             this.SuspendLayout();
@@ -63,18 +63,6 @@ namespace ZooApp
             this.lblnaamee.TabIndex = 12;
             this.lblnaamee.Text = "rEcuperando Contraseña...";
             // 
-            // btnCloseRevEmail
-            // 
-            this.btnCloseRevEmail.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCloseRevEmail.Image = global::ZooApp.Properties.Resources.close;
-            this.btnCloseRevEmail.Location = new System.Drawing.Point(499, 5);
-            this.btnCloseRevEmail.Name = "btnCloseRevEmail";
-            this.btnCloseRevEmail.Size = new System.Drawing.Size(25, 25);
-            this.btnCloseRevEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnCloseRevEmail.TabIndex = 1;
-            this.btnCloseRevEmail.TabStop = false;
-            this.btnCloseRevEmail.Click += new System.EventHandler(this.btnCloseRevEmail_Click);
-            // 
             // txtRecoverEmail
             // 
             this.txtRecoverEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -93,6 +81,13 @@ namespace ZooApp
             this.txtRecoverEmail.Size = new System.Drawing.Size(473, 52);
             this.txtRecoverEmail.TabIndex = 6;
             this.txtRecoverEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // Controller
+            // 
+            this.Controller.Fixed = true;
+            this.Controller.Horizontal = true;
+            this.Controller.TargetControl = this.pnlControllerRecPass;
+            this.Controller.Vertical = true;
             // 
             // btnSendRecoverEmail
             // 
@@ -120,12 +115,17 @@ namespace ZooApp
             this.btnSendRecoverEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSendRecoverEmail.Click += new System.EventHandler(this.btnSendRecoverEmail_Click);
             // 
-            // Controller
+            // btnCloseRevEmail
             // 
-            this.Controller.Fixed = true;
-            this.Controller.Horizontal = true;
-            this.Controller.TargetControl = this.pnlControllerRecPass;
-            this.Controller.Vertical = true;
+            this.btnCloseRevEmail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCloseRevEmail.Image = global::ZooApp.Properties.Resources.close;
+            this.btnCloseRevEmail.Location = new System.Drawing.Point(499, 5);
+            this.btnCloseRevEmail.Name = "btnCloseRevEmail";
+            this.btnCloseRevEmail.Size = new System.Drawing.Size(25, 25);
+            this.btnCloseRevEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnCloseRevEmail.TabIndex = 1;
+            this.btnCloseRevEmail.TabStop = false;
+            this.btnCloseRevEmail.Click += new System.EventHandler(this.btnCloseRevEmail_Click);
             // 
             // RecoverEmail
             // 
