@@ -7,7 +7,7 @@ namespace ZooApp
     public partial class AllAnimals : Form
     {
 
-        ControlAnimals control = new ControlAnimals();
+        ControlAnimals Control = new ControlAnimals();
 
         public AllAnimals()
         {
@@ -16,12 +16,12 @@ namespace ZooApp
 
         private void btnAddAnimal_Click(object sender, EventArgs e)
         {
-            loadAnimal("Agregar Animal");
+            loadAnimal();
         }
 
         private void btnModify_Click(object sender, EventArgs e)
         {
-            loadAnimal("Modificar Animal");
+            loadAnimal();
         }
 
         public void Animal_FormClosed(object sender, FormClosedEventArgs e)
@@ -29,23 +29,18 @@ namespace ZooApp
             getAnimals();
         }
 
-        private void loadAnimal(string letter = "Nuevo")
+        private void loadAnimal()
         {
-            if(letter == "Modificar")
-            {
-                Animal animalF = new Animal();
-                animalF.lblAnimal.Text = letter;
-                animalF.FormClosed += Animal_FormClosed;
-                animalF.Show();
-            }
-            else
-            {
-                Animal animalF = new Animal();
-                animalF.lblAnimal.Text = letter;
-                animalF.FormClosed += Animal_FormClosed;
-                animalF.Show();
-            }
-            
+            Animal animalF = new Animal();
+            animalF.FormClosed += Animal_FormClosed;
+            animalF.Show(); 
+        }
+
+        private void loadAnimal(string id, string Nombre, string NombreC, string Genero, string Especie, string Habitat, string FechaNac)
+        {
+            Animal animalF = new Animal(id, Nombre, NombreC, Genero, Especie, Habitat, FechaNac);
+            animalF.FormClosed += Animal_FormClosed;
+            animalF.Show();
         }
 
         private void AllAnimals_Load(object sender, EventArgs e)
@@ -53,23 +48,30 @@ namespace ZooApp
             getAnimals();
         }
 
-        public void getAnimals()
+        private void getAnimals()
         {
-            DataSet ds = control.getAnimals();
+            DataSet ds = Control.getAnimals();
 
             dgvAnimalList.DataSource = ds.Tables[0].DefaultView;
             dgvAnimalList.Columns[0].Visible = false;
+            dgvAnimalList.Columns[1].Visible = false;
+            dgvAnimalList.Columns[2].Visible = false;
+            dgvAnimalList.Columns[3].Visible = false;
+
         }
 
-        private void dgvAnimalList_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvAnimalList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string Id = dgvAnimalList.Rows[e.RowIndex].Cells[2].Value.ToString(),
-                Nombre = dgvAnimalList.Rows[e.RowIndex].Cells[1].Value.ToString(),
-                NombreCientifico = dgvAnimalList.Rows[e.RowIndex].Cells[2].Value.ToString(),
-                Genero = dgvAnimalList.Rows[e.RowIndex].Cells[3].Value.ToString(),
-                Especie = dgvAnimalList.Rows[e.RowIndex].Cells[4].Value.ToString(),
-                Habitat = dgvAnimalList.Rows[e.RowIndex].Cells[5].Value.ToString(),
-                FechaNac = dgvAnimalList.Rows[e.RowIndex].Cells[6].Value.ToString();
+            string
+                id = dgvAnimalList.Rows[e.RowIndex].Cells[0].Value.ToString(),
+                Genero = dgvAnimalList.Rows[e.RowIndex].Cells[1].Value.ToString(),
+                Especie = dgvAnimalList.Rows[e.RowIndex].Cells[2].Value.ToString(),
+                Habitat = dgvAnimalList.Rows[e.RowIndex].Cells[3].Value.ToString(),
+                Nombre = dgvAnimalList.Rows[e.RowIndex].Cells[4].Value.ToString(),
+                NombreC = dgvAnimalList.Rows[e.RowIndex].Cells[5].Value.ToString(),
+                FechaNac = dgvAnimalList.Rows[e.RowIndex].Cells[9].Value.ToString();
+
+            loadAnimal(id, Nombre, NombreC, Genero, Especie, Habitat, FechaNac);
         }
     }
 }

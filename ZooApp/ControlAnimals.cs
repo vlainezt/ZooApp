@@ -7,34 +7,46 @@ namespace ZooApp
 
         Conexion conn = new Conexion();
 
-        public bool newAnimals(string Nombre, string NombreCientifico, int IdGenero, int IdEspecie, int IdHabitat, string FechaNac)
+        public bool newAnimal(string Nombre, string NombreCientifico, int IdGenero, int IdEspecie, int IdHabitat, string FechaNac)
         {
-            string query = string.Format("INSERT INTO Animals (Nombre, NombreCientifico, IdGenero, IdEspecie, IdHabitat, FechaNac) VALUES('{0}', '{1}', {2}, {3}, {4}, '{5}') ", Nombre, NombreCientifico, IdGenero, IdEspecie, IdHabitat, FechaNac);
-            return conn.setData(query);
+            string Query = string.Format("INSERT INTO Animals (Nombre, NombreCientifico, IdGenero, IdEspecie, IdHabitat, FechaNac) VALUES ('{0}', '{1}', {2}, {3}, {4}, '{5}')", Nombre, NombreCientifico, IdGenero, IdEspecie, IdHabitat, FechaNac);
+            return conn.setData(Query);
         }
 
-        public DataSet getAnimals() 
+        public bool updateAnimal(int IdAnimal, string Nombre, string NombreCientifico, int IdGenero, int IdEspecie, int IdHabitat, string FechaNac)
         {
-            string query = "SELECT IdAnimal, Nombre, NombreCientifico, Genero, Especie, Habitat, FechaNac FROM Animals, Genero, Especie, Habitat WHERE Animals.IdGenero = Genero.IdGenero AND Animals.IdEspecie = Especie.IdEspecie AND Animals.IdHabitat = Habitat.IdHabitat";
-            return conn.readQuery(query, "Animals");
+            string Query = string.Format("UPDATE Animals SET Nombre = '{0}', NombreCientifico = '{1}', IdGenero = {2}, IdEspecie = {3}, IdHabitat = {4}, FechaNac = '{5}' WHERE IdAnimal = {6}", Nombre, NombreCientifico, IdGenero, IdEspecie, IdHabitat, FechaNac, IdAnimal);
+            return conn.setData(Query);
         }
 
-        public DataSet getEspecie()
+        public bool removeAnimal(int IdAnimal)
         {
-            string query = "SELECT * FROM Especie";
-            return conn.readQuery(query, "Especie");
+            string Query = string.Format("DELETE FROM Animals WHERE IdAnimal = {0}", IdAnimal);
+            return conn.setData(Query);
+        }
+
+        public DataSet getAnimals()
+        {
+            string Query = "SELECT IdAnimal, Genero.IdGenero, Especie.IdEspecie, Habitat.IdHabitat, Nombre, NombreCientifico, Genero, Especie, Habitat, FechaNac FROM Animals, Especie, Genero, Habitat WHERE Animals.IdGenero = Genero.IdGenero AND Animals.IdEspecie = Especie.IdEspecie AND Animals.IdHabitat = Habitat.IdHabitat";
+            return conn.readQuery(Query, "Animal");
         }
 
         public DataSet getGenero()
         {
-            string query = "SELECT * FROM Genero";
-            return conn.readQuery(query, "Genero");
+            string Query = "SELECT * FROM Genero";
+            return conn.readQuery(Query, "Genero");
+        }
+
+        public DataSet getEspecie()
+        {
+            string Query = "SELECT * FROM Especie";
+            return conn.readQuery(Query, "Especie");
         }
 
         public DataSet getHabitat()
         {
-            string query = "SELECT * FROM Habitat";
-            return conn.readQuery(query, "Habitat");
+            string Query = "SELECT * FROM Habitat";
+            return conn.readQuery(Query, "Habitat");
         }
 
     }
