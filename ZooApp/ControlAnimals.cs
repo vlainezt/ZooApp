@@ -49,5 +49,17 @@ namespace ZooApp
             return conn.readQuery(Query, "Habitat");
         }
 
+        public DataSet getRatingHabitat(string asc_or_desc = "ASC")
+        {
+            string Query = "SELECT COUNT(*) as Cantidad, Habitat FROM Animals, Habitat WHERE Animals.IdHabitat = Habitat.IdHabitat GROUP BY Habitat ORDER BY Cantidad " + asc_or_desc;
+            return conn.readQuery(Query, "Habitat");
+        }
+
+        public DataSet getRatingEspecie(string asc_or_desc = "DESC")
+        {
+            string Query = "SELECT TOP 3 COUNT(*) AS Cantidad, Especie FROM Animals, Especie WHERE Animals.IdEspecie = Especie.IdEspecie GROUP BY Especie ORDER BY Cantidad " + asc_or_desc;
+            return conn.readQuery(Query, "Especie");
+        }
+
     }
 }
