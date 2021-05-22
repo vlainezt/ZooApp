@@ -92,5 +92,11 @@ namespace ZooApp
             changeForms(new AllAnimals());
 
         }
+
+        private void btnEstadisticas_Click(object sender, EventArgs e)
+        {
+            changeForms(new Grafica());
+
+        }
     }
 }
