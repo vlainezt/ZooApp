@@ -7,19 +7,12 @@ namespace ZooApp
     {
         Conexion conn = new Conexion();
 
-        public bool Auth(string User, string Password)
+        public DataRow[] Auth(string User, string Password)
         {
             string query = String.Format("select * from Usrs where Usr='{0}' and Pass='{1}'", User, Password);
             DataRow[] dt = conn.readQuery(query, "Usrs", true);
 
-            if (dt.Length == 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return dt;
         }
 
         public bool Register(string User, string Password, string Email)

@@ -89,3 +89,13 @@ C:\instructoria\ZooApp\bin\Debug\LiveCharts.WinForms.pdb
 C:\instructoria\ZooApp\bin\Debug\LiveCharts.WinForms.xml
 C:\instructoria\ZooApp\bin\Debug\LiveCharts.Wpf.pdb
 C:\instructoria\ZooApp\bin\Debug\LiveCharts.Wpf.xml
+C:\Instructoria\ZooApp\ZooApp\bin\Debug\LiveCharts.dll
+C:\Instructoria\ZooApp\ZooApp\bin\Debug\LiveCharts.WinForms.dll
+C:\Instructoria\ZooApp\ZooApp\bin\Debug\LiveCharts.Wpf.dll
+C:\Instructoria\ZooApp\ZooApp\bin\Debug\LiveCharts.pdb
+C:\Instructoria\ZooApp\ZooApp\bin\Debug\LiveCharts.xml
+C:\Instructoria\ZooApp\ZooApp\bin\Debug\LiveCharts.WinForms.pdb
+C:\Instructoria\ZooApp\ZooApp\bin\Debug\LiveCharts.WinForms.xml
+C:\Instructoria\ZooApp\ZooApp\bin\Debug\LiveCharts.Wpf.pdb
+C:\Instructoria\ZooApp\ZooApp\bin\Debug\LiveCharts.Wpf.xml
+C:\Instructoria\ZooApp\ZooApp\obj\Debug\ZooApp.Grafica.resources

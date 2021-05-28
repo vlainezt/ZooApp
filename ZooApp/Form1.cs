@@ -33,10 +33,20 @@ namespace ZooApp
             string User = txtUserNameLogin.Text.Trim(),
                 Password = txxPasswordLogin.Text.Trim();
 
-            bool result = zooConfig.Auth(User, Password);
+            DataRow[] dt = zooConfig.Auth(User, Password);
 
-            if (result)
+            if (dt.Length == 1)
             {
+
+                DataRow dtR = dt[0]; //Esto se convierte como un array
+
+                // Los para sacar sus varoles es:
+                // dtR[indice].ToString().Trim()
+                // En donde:
+                // dtR[0] ===> Id
+                // dtR[1] ===> Email
+                // dtR[2] ===> Password
+
                 frmDashboard form = new frmDashboard();
                 form.Show();
                 this.Hide();
