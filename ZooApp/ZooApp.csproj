@@ -126,6 +126,12 @@
     <Compile Include="Grafica.Designer.cs">
       <DependentUpon>Grafica.cs</DependentUpon>
     </Compile>
+    <Compile Include="HistorialAnimales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistorialAnimales.Designer.cs">
+      <DependentUpon>HistorialAnimales.cs</DependentUpon>
+    </Compile>
     <Compile Include="PasswordCode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Grafica.resx">
       <DependentUpon>Grafica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistorialAnimales.resx">
+      <DependentUpon>HistorialAnimales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PasswordCode.resx">
       <DependentUpon>PasswordCode.cs</DependentUpon>

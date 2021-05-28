@@ -98,5 +98,10 @@ namespace ZooApp
             changeForms(new Grafica());
 
         }
+
+        private void pnlForms_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
